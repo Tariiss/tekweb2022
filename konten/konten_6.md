@@ -1,0 +1,1 @@
+Ini adalah contoh dari deskrisi singkat dummy

@@ -1,0 +1,44 @@
+[
+    {
+        "title":"Self Healing: Bagaimana Diri Mengobati Luka",
+        "deskripsi": "Selama ini otak hanya digunakan untuk problem solving, mempelajari pengetahuan atau berhitung. Sementara, yang terkait dengan perasaan, emosi, feeling semuanya ada di hati. Ternyata itu salah besar.",
+        "foto": "./img/2.jfif",
+        "penulis": "Justinus Benni Indrianto",
+        "konten": "konten_1.md"
+    },
+    {
+        "title":"Perilaku Agresif Remaja",
+        "deskripsi": "Hari senin tanggal 23 kemarin hati saya terasa miris ketika melihat berita di sebuah stasiun televisi swasta...",
+        "foto": "./img/3.jpg",
+        "penulis": "AL Nadhirin",
+        "konten": "konten_2.md"
+    },
+    {
+        "title":"Waspadai Pergaulan Bebas Bagi Generasi Bangsa",
+        "deskripsi": "Pergaulan bebas yang terjadi di kalangan remaja ternyata berasal dari eksploitasi seksual pada media yang ada di sekeliling kita, Yuk simak penjelasannya...!",
+        "foto": "./img/1.jpg",
+        "penulis": "Ruth Avrilda Nathania",
+        "konten": "konten_3.md"
+    },
+    {
+        "title":"Sebuah DUMMYARTICLE 4",
+        "deskripsi": "dummyarticle-4 | isinya cuman dummy",
+        "foto": "./img/2.jfif",
+        "penulis": "Taris Styaningrum",
+        "konten": "konten_4.md"
+    },
+    {
+        "title":"Sebuah DUMMYARTICLE 5",
+        "deskripsi": "Never lost hope, because it is the key to achieve all your dreams",
+        "foto": "./img/8.jpeg",
+        "penulis": "Taris Styaningrum",
+        "konten": "konten_5.md"
+    },
+    {
+        "title":"Sebuah DUMMYARTICLE 6",
+        "deskripsi": "dummyarticle-6 | Ini adalah contoh dari deskrisi singkat dummy",
+        "foto": "./img/2.jfif",
+        "penulis": "Taris Styaningrum",
+        "konten": "konten_6.md"
+    }
+]

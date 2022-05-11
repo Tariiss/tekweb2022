@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- My CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <!-- Icon dari Fontawesome -->
+  <script src="https://kit.fontawesome.com/348c676099.js" crossorigin="anonymous"></script>
+
+  <title>Tariss!!!</title>
+</head>
+
+<body id="app">
+  <div class="isi">
+    <nav class="navbar navbar-expand-sm navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link nvb" :href="home_id">{{home_nav}}</a>
+          </li>
+          <li class="nav-item" v-for="nav in navig">
+            <a class="nav-link nvb" :href="nav.id">{{nav.nav}}</a>
+          </li>
+        </ul>
+        <span class="navbar-text nvb">
+          <marquee behavior="" direction="">{{welcome}}</marquee>
+        </span>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <img src="./img/33.jpeg" class="rounded mx-auto d-block mt-5 shadow col-md-5" alt="Image Here..">
+
+        <svg viewbox="0 0 100 20">
+          <defs>
+            <linearGradient id="gradient">
+              <stop color="#000" />
+            </linearGradient>
+            <pattern id="wave" x="0" y="-0.5" width="100%" height="100%" patternUnits="userSpaceOnUse">
+              <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z"
+                mask="url(#mask)" fill="url(#gradient)">
+                <animateTransform attributeName="transform" begin="0s" dur="1.5s" type="translate" from="0,0" to="40,0"
+                  repeatCount="indefinite" />
+              </path>
+            </pattern>
+          </defs>
+          <text text-anchor="middle" x="50" y="15" font-size="11" fill="#0000FF" fill-opacity="0.1">{{home.nama}}</text>
+          <text text-anchor="middle" x="50" y="15" font-size="10" fill="url(#wave)" fill-opacity="1">{{home.wave_nama}}</text>
+        </svg>
+
+        <h2 onmouseenter="muncul()">{{home.mhs}}</h2>
+
+        <div class="alert alert-dark alert-dismissible fade show social my-3" role="alert" id="sosmed">
+          <center id="isi"><a class="mx-4" href="https://www.youtube.com/channel/UCNelNlOCcfYm8Fg0vKu1BlA"><i
+                class="fab fa-youtube fa-2x"></i></a> <a class="mx-4"
+              href="https://instagram.com/tariiss_?utm_medium=copy_link"><i class="fab fa-instagram fa-2x"></i></a> <a
+              class="mx-4" href="https://github.com/Tariiss"><i class="fab fa-github fa-2x"></i></a>
+          </center>
+
+          <button type="button" class="close" onclick="tutup()">
+            <span>&times;</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <nav class="navbar navbar-expand-lg ">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <h3 class="mx-auto ">{{home.tx_1}}</h3>
+  </nav>
+
+
+    <main class="main2" id="2">
+      <div class="container">
+        <div class="card">
+          <h3 class="mb-3"><span class="under">{{about.judul}}</span></h3>
+          <p>{{about.desc}}</p>
+          <ul class="list-group">
+            <li v-for="sk in about.skill" class="list-group-item">{{sk.nama_s}} | <span v-bind:style="{color:sk.color}" >{{sk.kemp}}</span>
+          </ul>
+          <p class="mt-3"> </p>
+        </div>
+
+        <div class="card" id="3">
+          <h3 class="mb-3"><span class="under">{{artikel.judul}}</span></h3>
+          <p>{{artikel.desc}}</p>
+          <div class="row mx-2 ">
+
+
+            <div v-for="item in article" class="col-lg-4">
+              <div class="card" style="border-left: 5px solid rgb(170, 170, 170);">
+                <img v-bind:src="item.foto" class="card-img-top" alt="Image here...">
+                <div class="card-body">
+                  <h5 class="card-title mb-1">{{item.title}}</h5>
+                  <p class="card-subtitle text-muted mb-3">By: {{item.penulis}}</p>
+                  <p class="card-text">{{item.deskripsi}}</p>
+                  <a :href="'./read.html?gatherer='+item.konten" class="btn btn-secondary">{{btn}}</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.3/showdown.min.js"></script>
+  <script src="./javascript/script.js"></script>
+</body>
+
+</html>
