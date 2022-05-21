@@ -80,7 +80,7 @@ Vue.createApp({
     getArticle() {
       axios
         .get(
-          src = "../konten/articles.json"
+          "https://raw.githubusercontent.com/Tariiss/tekweb2022/main/konten/articles.json"
         )
         .then((res) => {
           console.log(res.data); //melihat respon data pada console browser
