@@ -14,7 +14,7 @@ Vue.createApp({
         console.log(nama_artikelnya);
         axios
           .get(
-            src="../konten/"+nama_artikelnya
+            "https://raw.githubusercontent.com/Tariiss/tekweb2022/main/konten/"+nama_artikelnya
           )
           .then((res) => {
             var html = converter.makeHtml(res.data);           
