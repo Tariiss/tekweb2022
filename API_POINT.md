@@ -302,3 +302,31 @@ response:
 true    // if success
 false   // if failure
 ```
+
+## Desain database
+
+Berikut adalah desain database untuk API yang akan digunakan
+
+```mermaid
+classDiagram
+    class portfoliouser{
+        # id: int
+        + nama: string
+        + motto: string
+        + yt_url: string
+        + ig_url: string
+        + gh_url: string
+        + avatar_url: string
+    }
+    class article{
+        # id: int
+        + title: string
+        + content: string
+        + author: string
+    }
+    class read_article{
+        # id: int
+        + title: string
+        + content: string
+        + referensi: string
+    }
