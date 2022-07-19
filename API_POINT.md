@@ -317,16 +317,32 @@ classDiagram
         + ig_url: string
         + gh_url: string
         + avatar_url: string
+        + getAllUser()
+        + getUserById()
+        + createUser()
+        + updateUser()
+        + deleteUser()
     }
     class article{
         # id: int
         + title: string
         + content: string
         + author: string
+        + getAllArticle()
+        + getArticleById()
+        + createArticle()
+        + updateArticle()
+        + deleteArticle()
     }
     class read_article{
         # id: int
         + title: string
         + content: string
         + referensi: string
+        + getAllReadArticle()
+        + getReadArticleById()
+        + createReadArticle()
+        + updateReadArticle()
+        + deleteReadArticle()
     }
+```
