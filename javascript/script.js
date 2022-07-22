@@ -1,3 +1,4 @@
+let apiUrl = "http://myapi.tarisstyaningrum.xyz/index.php/";
 Vue.createApp({
   data() {
     return {
@@ -82,6 +83,18 @@ Vue.createApp({
         .get(
           "https://raw.githubusercontent.com/Tariiss/tekweb2022/main/konten/articles.json"
         )
+        .then((res) => {
+          console.log(res.data); //melihat respon data pada console browser
+          this.article = res.data; //memperbarui variabel article pada bagian data()
+          this.getPortfolioUser();
+        })
+        .catch((error) => {
+          console.log(error); //melihat error jika pengambilan data adalah gagal
+        });
+    },
+    getPortfolioUser() {
+      axios
+        .get(apiUrl + "portfoliouser/1")
         .then((res) => {
           console.log(res.data); //melihat respon data pada console browser
           this.article = res.data; //memperbarui variabel article pada bagian data()
