@@ -212,101 +212,6 @@ true    // if success
 false   // if failure
 ```
 
-> ### read_article
-
-#### Menampilkan semua isi dari seluruh read_article
-
-```
-GET: /read_article
-
-response:
-[
-    {
-        "id"             : "",
-        "title"          : "",
-        "content"        : "",
-        "referensi"      : "",
-    },
-    ...
-]
-```
-
-#### Menampilkan isi read_article berdasarkan `id`
-
-```
-GET: /read_article/[id]
-
-response:
-{
-    "id"            : "",
-    "title"         : "",
-    "content"       : "",
-    "referensi"     : ""
-}
-```
-
-#### membuat isi bacaan pada read_article
-
-```
-POST: /read_article
-
-headers:
-{
-    Content-type: 'application/json',
-    Authorization: 'Bearer [access_token]'
-}
-
-body:
-{
-    "title"         : "",
-    "content"       : "",
-    "referensi"     : ""
-}
-
-response:
-true    // if success
-false   // if failure
-```
-
-#### Mengubah isi data bacaan read_article
-
-```
-PUT: /read_article
-headers:
-{
-    Content-type: 'application/json',
-    Authorization: 'Bearer [access_token]'
-}
-
-body:
-{
-    "id"            : "",
-    "title"         : "",
-    "content"       : "",
-    "referensi"     : ""
-}
-
-response:
-true    // if success
-false   // if failure
-```
-
-#### Menghapus data bacaan read_article
-
-```
-DELETE: /read_article/[id]
-
-headers:
-{
-    Content-type: 'application/json',
-    Authorization: 'Bearer [access_token]'
-}
-
-response:
-true    // if success
-false   // if failure
-```
-
 ## Desain database
 
 Berikut adalah desain database untuk API yang akan digunakan
@@ -332,22 +237,12 @@ classDiagram
         + thumbnail_url: string
         + title: string
         + content: string
+        + content_url: string
         + author: string
         + getAllArticle()
         + getArticleById()
         + createArticle()
         + updateArticle()
         + deleteArticle()
-    }
-    class read_article{
-        # id: int
-        + title: string
-        + content: string
-        + referensi: string
-        + getAllReadArticle()
-        + getReadArticleById()
-        + createReadArticle()
-        + updateReadArticle()
-        + deleteReadArticle()
     }
 ```
