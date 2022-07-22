@@ -123,6 +123,7 @@ response:
 [
     {
         "id"             : "",
+        "thumbnail"      : "",
         "title"          : "",
         "content"        : "",
         "author"         : "",
@@ -139,6 +140,7 @@ GET: /article/[id]
 response:
 {
     "id"             : "",
+    "thumbnail"      : "",
     "title"          : "",
     "content"        : "",
     "author"         : "",
@@ -158,6 +160,7 @@ headers:
 
 body:
 {
+    "thumbnail"      : "",
     "title"          : "",
     "content"        : "",
     "author"         : "",
@@ -182,6 +185,7 @@ headers:
 body:
 {
     "id"             : "",
+    "thumbnail"      : "",
     "title"          : "",
     "content"        : "",
     "author"         : "",
@@ -325,6 +329,7 @@ classDiagram
     }
     class article{
         # id: int
+        + thumbnail_url: string
         + title: string
         + content: string
         + author: string
