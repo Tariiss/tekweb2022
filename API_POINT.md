@@ -1,6 +1,6 @@
 ## API Points
 
-Berikut adalah entitas yang diperlukan dalam pengembangan aplikasi dari portofolio saya adalah portfolio_users, article, dan read_article.
+Berikut adalah entitas yang diperlukan dalam pengembangan aplikasi dari portofolio saya adalah portfolio_users, article, dan keterampilan.
 
 > ### portfolio_user
 
@@ -212,9 +212,97 @@ true    // if success
 false   // if failure
 ```
 
-> ### About
+> ### Skill
 
-#### Menampilkan 
+#### Menampilkan semua Skill
+
+```
+GET: /skill
+
+response:
+[
+    {
+        "id"            : "",
+        "skill"         : "",
+        "kemampuan      : ""
+    }
+    ...
+}
+```
+
+#### Menampilkan skill berdasarkan `id`
+
+```
+GET: /skill/[id]
+
+response:
+{
+    "id"            : "",
+    "skill"         : "",
+    "kemampuan      : ""
+}
+```
+
+#### Menamabahkan skill
+
+```
+POST: /skill
+
+headers:
+{
+    Content-type: 'application/json',
+    Authorization: 'Bearer [access_token]'
+}
+
+body:
+{
+    "skill"         : "",
+    "kemampuan      : ""
+}
+
+response:
+true    // if success
+false   // if failure
+```
+
+#### Update data skill
+
+```
+PUT: /skill
+
+headers:
+{
+    Content-type: 'application/json',
+    Authorization: 'Bearer [access_token]'
+}
+
+body:
+{
+    "id"            : "",
+    "skill"         : "",
+    "kemampuan      : ""
+}
+
+response:
+true    // if success
+false   // if failure
+```
+
+#### Menghapus data skill
+
+```
+DELETE: /skill/[id]
+
+headers:
+{
+    Content-type: 'application/json',
+    Authorization: 'Bearer [access_token]'
+}
+
+response:
+true    // if success
+false   // if failure
+```
 
 ## Desain database
 
@@ -249,8 +337,14 @@ classDiagram
         + updateArticle()
         + deleteArticle()
     }
-    class keterampilan{
+    class skill{
         # id: int
-        + 
+        + skill: string
+        + kemampuan: string
+        + getAllSkill()
+        + getSkillById()
+        + createSkill()
+        + updateSkill()
+        + deleteSkill()
     }
 ```
