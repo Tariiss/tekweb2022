@@ -212,6 +212,10 @@ true    // if success
 false   // if failure
 ```
 
+> ### About
+
+#### Menampilkan 
+
 ## Desain database
 
 Berikut adalah desain database untuk API yang akan digunakan
@@ -244,5 +248,9 @@ classDiagram
         + createArticle()
         + updateArticle()
         + deleteArticle()
+    }
+    class keterampilan{
+        # id: int
+        + 
     }
 ```
