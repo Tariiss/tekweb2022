@@ -5,6 +5,7 @@ Vue.createApp({
       // Buat nge keep artikelnya yang bakal ke direct ke read.html
       article: [],
       portfoliouser: [],
+      skill: [],
 
       // Navbar
       home_nav: 'Home',
@@ -86,6 +87,7 @@ Vue.createApp({
           console.log(res.data); //melihat respon data pada console browser
           this.article = res.data; //memperbarui variabel article pada bagian data()
           this.getPortfolioUser();
+          this.getSkill();
         })
         .catch((error) => {
           console.log(error); //melihat error jika pengambilan data adalah gagal
@@ -96,12 +98,23 @@ Vue.createApp({
         .get(apiUrl + "portfoliouser/1")
         .then((res) => {
           console.log(res.data); //melihat respon data pada console browser
-          this.portfoliouser = res.data; //memperbarui variabel article pada bagian data()
+          this.portfoliouser = res.data; //memperbarui variabel portfoliouser pada bagian data()
         })
         .catch((error) => {
           console.log(error); //melihat error jika pengambilan data adalah gagal
         });
-    }
+    },
+    getSkill() {
+      axios
+        .get(apiUrl + "article/")
+        .then((res) => {
+          console.log(res.data); //melihat respon data pada console browser
+          this.skill = res.data; //memperbarui variabel skill pada bagian data()
+        })
+        .catch((error) => {
+          console.log(error); //melihat error jika pengambilan data adalah gagal
+        });
+    },
   },
   beforeMount() {
     this.getArticle() //eksekusi fungsi getArticles() pada bagian methods saat halaman terbuka
