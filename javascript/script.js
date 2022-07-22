@@ -106,7 +106,7 @@ Vue.createApp({
     },
     getSkill() {
       axios
-        .get(apiUrl + "article/")
+        .get(apiUrl + "skill/")
         .then((res) => {
           console.log(res.data); //melihat respon data pada console browser
           this.skill = res.data; //memperbarui variabel skill pada bagian data()
